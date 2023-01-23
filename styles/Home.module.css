@@ -1,155 +1,201 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
-}
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
+  padding: 5% 10%;
+  width: 100vw;
+  height: 100%;
+  background-color: rgb(250, 246, 246);
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 0.7rem;
 }
 
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
+.imagen { grid-area: header; }
+.botondiv { grid-area: menu; }
+.new { grid-area: main; }
+
+.gridcontainer{
+  display: grid;
+  grid-template-areas:
+  'header header header main main'
+  'menu menu menu main main';
+  gap: 4%;
+  margin-top: 3%;
+}
+.bread {
+   width: 100%;
+   display: inline-flex;
+   justify-content: space-between;
+   color: hsl(236, 13%, 42%);
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+.bread p:hover {
+   color: hsl(5, 85%, 63%);
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.breadp  {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 40%;
+  font-size: 18px;
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.mobile {
+  display: none;
 }
 
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
+.mob {
+  display: none;
+}
+
+.imagen img {
+  max-width: 108%;
+}
+
+.new {
+  display: inline-block;
+  background-color: hsl(240, 100%, 5%);
+  padding: 2.5% 5%;
+  margin-left: 11%;
+  line-height: 3ch;
+  letter-spacing: 0.09ch;
+  width: 84%;
+}
+
+.setion   {
+   padding: 10% 0% 10% 0%;
+   border-bottom: 1px solid hsl(60, 0%, 58%);
+}
+
+.ultimo {
+  padding-top: 9%;
+  padding-bottom: 3%;
+}
+
+.new h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 40px;
+  padding-top: 6%;
+}
+
+.new h4 {
+  color: hsl(36, 100%, 99%);
+  font-size: 19px;
+  padding: 5% 0%;
+}
+
+.new h4:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.new p {
+  color: hsl(237, 10%, 64%);
+  font-weight: 400;
+  margin-top: -1%;
+}
+
+.botondiv {
+  display: inline-flex;
+  padding-top: 2%;
+  width: 160%;
+}
+
+.botondiv h1 {
+  font-size: 52px;
+  line-height: 1.7ch;
+  width: 65%;
+  font-weight:900;
+}
+
+.botondiv p {
+   width: 55%;
+   color: hsl(236, 13%, 42%) ;
+   font-size: 18px;
+   line-height: 2.6ch;
+   margin-left: -10%;
+}
+
+.botondiv button {
+  background-color: hsl(5, 85%, 63%);
+  color: white;
+  font-size: 15px;
+  padding: 2%;
+  letter-spacing: 0.7ch;
+  border-style: none;
+  margin-top: 4%;
+  margin-left: -10%;
+  width: 28%;
+  font-weight: 700;
+}
+
+.botondiv button:hover {
+  background-color: hsl(240, 100%, 5%);;
+  color: white;
+}
+
+.footer {
+  display: inline-flex;
+  justify-content: space-between;
+  overflow: visible;
+  width: 103%;
+}
+
+.set1, .set2, .set3 {
+  display: inline-flex;
+  margin-top: 5%;
+}
+
+.set2 {
+  margin: 5% 1% 0% -5%;
+}
+
+.set1 img, .set2 img, .set3 img {
+  width: 70%;
+}
+
+.set1 h3, .set2 h3, .set3 h3 {
+  color: hsl(233, 8%, 79%);
+  font-size: 26px;
+  padding-bottom: 4%;
+}
+
+.set1 h4, .set2 h4, .set3 h4 {
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.set1 h4:hover, .set2 h4:hover, .set3 h4:hover {
+  color: hsl(5, 85%, 63%);;
+}
+
+.set1 p, .set2 p, .set3 p {
+  color: hsl(236, 13%, 42%);
+  line-height: 2.2ch;
+  margin-top: 3.5%;
+}
+
+.set1 p {
+  width: 70%;
+}
+
+.text1, .text2, .text3 {
+  margin-left:-3%;
+}
+
+.new h4:hover,.set1 h4:hover, .set2 h4:hover, .set3 h4:hover, .botondiv button:hover, .bread p:hover   {
+  cursor: url("/pointer.png"), auto;
+}
+
+.dark {
   position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
-.logo,
-.thirteen {
-  position: relative;
-}
-
-.thirteen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75px;
-  height: 75px;
-  padding: 25px 10px;
-  margin-left: 16px;
-  transform: translateZ(0);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0px 2px 8px -1px #0000001a;
-}
-
-.thirteen::before,
-.thirteen::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-/* Conic Gradient Animation */
-.thirteen::before {
-  animation: 6s rotate linear infinite;
-  width: 200%;
-  height: 200%;
-  background: var(--tile-border);
-}
-
-/* Inner Square */
-.thirteen::after {
-  inset: 0;
-  padding: 1px;
-  border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
-  background-clip: content-box;
-}
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 140%;
+  background: black;
+  opacity: 0.5;
+  z-index: 5;
+}  /* este es el code para el div que me cubre toda la screen y me la oscurece*/
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -157,122 +203,175 @@
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
 }
 
-@media (prefers-reduced-motion) {
-  .thirteen::before {
-    animation: none;
-  }
-
-  .card:hover span {
-    transform: none;
-  }
-}
 
 /* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+@media (max-width: 600px) {
+  .main {
+    padding: 5% 10%;
+    width: 375px;
+  }
+  
+  .gridcontainer{
+    display: inline-block;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
+  .breadp  {
+    justify-content: space-around;
+    position: absolute;
+    width: 40%;
+    height: 130%;
+    display: none ;
+    margin: -4% 0% 0% 18%;
+    color: black;
+    background-color: white;
+    font-weight: 600;
+    z-index: 10;
+    padding: 30% 5%;
   }
 
-  .card {
-    padding: 1rem 2.5rem;
+  .bread p {
+    margin-bottom: 20%;
+  }
+  
+.mobile {
+  display: block;
+}
+
+.menu {
+   margin-top: 25%;
+}
+
+.close {
+  position: absolute;
+  display: none;
+  z-index: 20;
+  left: 275px;
+} 
+  .des {
+    display: none;
   }
 
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
+  .mob {
+    display: block;
     width: 100%;
   }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
+  
+  .imagen img {
+    max-width: 108%;
   }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
+  
+  .new {
+    display: inline-block;
+    padding: 2.5% 5%;
+    margin: 5% 0%;
+    line-height: 3ch;
+    letter-spacing: 0.09ch;
+    width: 100%;
   }
+  
+  .setion   {
+     padding: 0% 0% 10% 0%;
+     border-bottom: 1px solid hsl(60, 0%, 58%);
+  }
+  
+  .ultimo {
+    padding-top: 9%;
+    padding-bottom: 3%;
+  }
+  
+  .new h2 {
+    font-size: 30px;
+    padding-top: 10%;
+  }
+  
+  .new h4 {
+    color: hsl(36, 100%, 99%);
+    font-size: 15px;
+    padding: 5% 0%;
+  }
+  
+  .new p {
+    font-size: 12px;
+  }
+  
+  .botondiv {
+    display: inline-block;
+    padding: 5% 2%;
+    width: 100%;
+  }
+  
+  .botondiv h1 {
+    font-size: 35px;
+    width: 100%;
+    font-weight:700;
+    line-height: 1.35ch;
+  }
+  
+  .botondiv p {
+     width: 105%;
+     font-size: 12.3px;
+     line-height: 3.2ch;
+     margin-left: 0%;
+     font-weight: 500;
+     padding-top: 5%;
+  }
+  
+  .botondiv button {
+    font-size: 12px;
+    padding: 4%;
+    margin-top: 7%;
+    margin-left: 0%;
+    width: 60%;
+    font-weight: 600;
+  }
+  
+
+  .footer {
+    display: inline-block;
+    justify-content: space-between;
+    width: 105%;
+    margin-top: 5%;
+  }
+  
+  .set2 {
+    margin: 5% 0% 0% 0%;
+  }
+  
+  .set1 img, .set2 img, .set3 img {
+    width: 85%;
+  }
+  
+  .set1 h3, .set2 h3, .set3 h3 {
+    font-size: 20px;
+    padding-bottom: 4%;
+  }
+  
+  .set1 h4, .set2 h4, .set3 h4 {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+  .set1 p, .set2 p, .set3 p {
+    line-height: 3.2ch;
+    margin-top: 3.5%;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .set1 p {
+    width: 70%;
+  }
+  
+  .text1, .text2, .text3 {
+    margin-left: -3%;
+    width: 120%;
+  }
+  
+  .new h4:hover,.menu, .close, .set1 h4:hover, .set2 h4:hover, .set3 h4:hover, .botondiv button:hover, .bread p:hover   {
+    cursor: url("/pointer.png"), auto;
+  }
+  
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
